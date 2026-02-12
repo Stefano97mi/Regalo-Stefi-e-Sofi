@@ -1,42 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="it">
 <head>
-    <title>Quiz</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domande</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Welcome to the Quiz</h1>
-    <form>
-        <!-- Existing Questions -->
-        <div>
-            <p>1. What is your name?</p>
-            <input type='text' name='question1' />
+    <div class="container">
+        <h1>Quizz</h1>
+        <div id="progress-bar"></div>
+        <div id="questions">
+            <div class="question">
+                <p>1. Qual è il tuo colore preferito?</p>
+                <button onclick="selectAnswer(0)">Blu</button>
+                <button onclick="selectAnswer(1)">Rosso</button>
+                <button onclick="selectAnswer(2)">Verde</button>
+                <button onclick="selectAnswer(3)">Giallo</button>
+            </div>
+            <div class="question">
+                <p>2. Qual è la tua stagione preferita?</p>
+                <button onclick="selectAnswer(0)">Estate</button>
+                <button onclick="selectAnswer(1)">Inverno</button>
+                <button onclick="selectAnswer(2)">Primavera</button>
+                <button onclick="selectAnswer(3)">Autunno</button>
+            </div>
+            <div class="question">
+                <p>3. Qual è il tuo animale preferito?</p>
+                <button onclick="selectAnswer(0)">Cane</button>
+                <button onclick="selectAnswer(1)">Gatto</button>
+                <button onclick="selectAnswer(2)">Uccello</button>
+                <button onclick="selectAnswer(3)">Pesce</button>
+            </div>
+            <div class="question">
+                <p>4. Qual è il tuo hobby preferito?</p>
+                <button onclick="selectAnswer(0)">Sport</button>
+                <button onclick="selectAnswer(1)">Arte</button>
+                <button onclick="selectAnswer(2)">Musica</button>
+                <button onclick="selectAnswer(3)">Letteratura</button>
+            </div>
+            <div class="question">
+                <p>5. Qual è il tuo film preferito?</p>
+                <button onclick="selectAnswer(0)">Azione</button>
+                <button onclick="selectAnswer(1)">Commedia</button>
+                <button onclick="selectAnswer(2)">Drammatico</button>
+                <button onclick="selectAnswer(3)">Fantascienza</button>
+            </div>
+            <div class="question">
+                <p>6. Quale tra queste pratiche mi eccitano di più?</p>
+                <button onclick="selectAnswer(0)">Metterti a 90 e scopare fino a venire</button>
+                <button onclick="selectAnswer(1)">Fare la 69</button>
+                <button onclick="selectAnswer(2)">Pompino e venirti addosso</button>
+                <button onclick="selectAnswer(3)">Ovviamente mi eccitano tutte</button>
+            </div>
         </div>
-        <div>
-            <p>2. What is your favorite color?</p>
-            <input type='text' name='question2' />
-        </div>
-        <div>
-            <p>3. What is your hobby?</p>
-            <input type='text' name='question3' />
-        </div>
-        <div>
-            <p>4. Where do you live?</p>
-            <input type='text' name='question4' />
-        </div>
-        <div>
-            <p>5. What is your favorite food?</p>
-            <input type='text' name='question5' />
-        </div>
-        <!-- New Question -->
-        <div>
-            <p>6. Quale tra queste pratiche mi eccitano di più?</p>
-            <input type='radio' name='question6' value='A'> Metterti a 90 e scopare fino a venire<br>
-            <input type='radio' name='question6' value='B'> Fare la 69<br>
-            <input type='radio' name='question6' value='C'> Pompino e venirti addosso<br>
-            <input type='radio' name='question6' value='D'> Ovviamente mi eccitano tutte<br>
-            <input type='hidden' name='correct_answer' value='D'>
-        </div>
-        <button type='submit'>Submit</button>
-    </form>
+        <button id="submit" onclick="submitQuiz()">Invia Risposte</button>
+    </div>
+    <script>
+        let questionCounter = 6;
+        // Add code to initialize progress bar and handle button clicks here
+    </script>
 </body>
 </html>
